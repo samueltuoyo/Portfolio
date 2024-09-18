@@ -9,6 +9,7 @@ const ProjectsBox = document.querySelectorAll('.box');
 const ProjectsPreviewBtn = document.querySelectorAll('.bg');
 const ProjectsGithubBtn = document.querySelectorAll('.gb');
 const btn = document.querySelector('button[type="submit"]');
+const message = document.querySelector('.message');
 let isMenuOpen = 'false';    
 menuBar.addEventListener('click', () => {
     isMenuOpen = !isMenuOpen;
@@ -34,6 +35,8 @@ toggleTheme.addEventListener('click', () => {
         mobNav.style.color = btn.style.color = 'black';
         btn.style.backgroundColor = 'purple';
         btn.style.color = 'white';
+        message.style.backgroundColor = 'black';
+        message.style.color = 'white';
         icons.forEach(icon => {
         icon.style.backgroundColor = 'black';
         icon.style.color = 'white';
@@ -82,3 +85,11 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   
   alert('Your message has been sent successfully!');
 });
+window.onload = () => {
+  message.style.right = '0px';
+
+  setTimeout(() => {
+    message.style.right = '-100%';
+  }, 3000)
+}
+

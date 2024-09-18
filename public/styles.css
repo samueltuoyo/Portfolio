@@ -213,12 +213,24 @@ button{
     padding: 20px 10px;
     margin: 20px 0 0 0;   
 }
-
+ .message{
+    position: fixed;
+    top: 340px;
+    right: -100%;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: black;
+    z-index: 1;
+    transition: right 0.5s;
+  }
 textarea{
     text-align: left;
 }
 #contact form button{
-    background: black;
+    background: purple;
     color: white;
 }
 
@@ -253,7 +265,6 @@ textarea{
 .about-content-text{
   border: 3px solid purple;
   padding: 20px;
-  width: 250px;
   border-radius: 30px;
   margin: auto;
 }
@@ -300,7 +311,7 @@ form{
     .fa-bars{
         display: none;
     }
-    
+   
     #projects .content .flex{
      display: grid;
      grid-template-columns: auto auto auto;
